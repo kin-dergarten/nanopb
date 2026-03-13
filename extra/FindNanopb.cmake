@@ -406,7 +406,7 @@ endforeach()
 # Create the library target
 add_library(nanopb STATIC EXCLUDE_FROM_ALL ${NANOPB_SRCS})
 #target_compile_features(nanopb PUBLIC c_std_11)
-target_compile_options(nanopb PUBLIC -std=c11)
+target_compile_options(nanopb PRIVATE -std=c11)
 target_include_directories(nanopb PUBLIC ${NANOPB_INCLUDE_DIRS})
 
 # Find the local protoc Executable
